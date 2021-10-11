@@ -1,0 +1,71 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <!-- <div style="position: absolute; left: 0px; top: 0px; border: solid 2px #555; width:594px; height:332px;">
+      <div style="overflow: hidden; margin-top: -100px; margin-left: -25px;">
+      </div>
+      <iframe
+      src="https://www.screenleap.com/343127117"
+      class="screen"
+      scrolling="auto"
+      width="1200"
+      height="800"
+      allow="microphone; camera"
+    ></iframe>
+      </div>
+      </div> -->
+    <h1>Socket IO Server FIFA Remote play</h1>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js"></script>
+    <script>
+      const socket = io();
+
+      // const video = document.getElementById("video");
+
+      // var password = prompt("Enter the password");
+      // if (password === "test") {
+      //   var displayMediaOptions = {
+      //     video: {
+      //       cursor: "always",
+      //     },
+      //     audio: false,
+      //   };
+      //   videostream =
+      //     navigator.mediaDevices.getDisplayMedia(displayMediaOptions);
+      //   video.srcObj = videostream;
+      //   socket.emit("videoobj", videostream);
+      // } else {
+      //   console.log("nope");
+      // }
+
+      // socket.on("videoobj", function (videoobj) {
+      //   video.srcObj = videoobj;
+      // });
+
+      document.onkeydown = (event) => {
+        event = event || window.event;
+
+        socket.emit("down", event.keyCode);
+      };
+      document.onkeyup = (event) => {
+        event = event || window.event;
+
+        socket.emit("up", event.keyCode);
+      };
+      // window.onkeypress = function (e) {
+      //   e = e || window.event;
+      //   socket.emit("message", e.keyCode);
+      //   console.log("key pressed");
+      //   // use e.keyCode
+      // };
+    </script>
+  </body>
+</html>

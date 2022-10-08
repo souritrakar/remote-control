@@ -1,6 +1,6 @@
 # Xbox 'Remote' Controller
 
-Simple utility script I wrote in collaboration with @aritrakar to relay commands from a PlayStation controller / Browser to a web-server hosted on another  end, to control a Xbox remotely.
+Simple utility script I wrote in collaboration with @aritrakar to relay commands from a PlayStation controller / Browser (key presses) to a web-server hosted on another  end, to control a Xbox remotely to play games.
 
 How it works:
 

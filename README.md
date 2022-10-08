@@ -1,13 +1,11 @@
 # Xbox 'Remote' Controller
 
-A simple utility side project created to play games on an Xbox from a remote location using just your browser / A PS4 Controller
+Simple utility script I wrote in collaboration with @aritrakar to relay commands from a PlayStation controller / Browser to a web-server hosted on another  end, to control a Xbox remotely.
 
 How it works:
-
-A socket.io web server would be running on a local PC, hosted through *ngrok*. The other user (for multiplayer games) can visit the web-app and use keyboard controls to play. The key presses would be broadcasted to the server, which in turn are translated into Virtual Joystick movements, thus controlling the Xbox.
 
 Tech used:
 
 Python, JavaScript (Gamepad API), socket.io, Xbox MyVirtual Joystick 
 
-Note: The latency is much higher than what is feasible for games.
+Note: The latency between the request and the response was too high to play games in (near) real-time, which was the intended purpose.
